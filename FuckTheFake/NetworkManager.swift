@@ -28,11 +28,12 @@ class NetworkManager: NSObject {
         let _request = NSMutableURLRequest(URL: fuckingData.url)
         _request.setValue("FUCKING AGENT", forHTTPHeaderField: "User-Agent")
         _request.HTTPMethod = "POST"
+        _request.HTTPBody = fuckingData.toPostData()
         
+        var _conn:NSURLConnection! = NSURLConnection(request: _request, delegate: nil)
+        _conn!.start()
         
-        var _conn = NSURLConnection(request: _request, delegate: nil)
-
-        
+        NSLog("Sending");
     }
     
 }

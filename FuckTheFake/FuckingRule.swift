@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 let usernameNameArray:Array = ["username","u"]
 let usernameArray:Array = ["parkerlpg@me.com"]
@@ -29,9 +30,30 @@ class FuckingRule : NSObject {
         return data;
     }
     
-    func init() {
-        let usernameNameR = Int(arc4random_uniform(usernameNameArray.count))
-
+    
+    override init() {
+        super.init()
+        let usernameNameR = random() % usernameNameArray.count
+        let usernameNameS:String! = usernameNameArray[usernameNameR]
+        
+        let usernameR = random() % usernameArray.count
+        let usernameS:String! = usernameArray[usernameR]
+        
+        let passwordNameR = random() % passwordNameArray.count
+        let passwordNameS:String! = passwordNameArray[passwordNameR]
+        
+        let passwordR = random() % passwordArray.count
+        let passwordS:String! = passwordArray[passwordR]
+        
+        
+        let urlR = random() % urlArray.count
+        let urlS:String! = urlArray[urlR]
+        
+        self.url = NSURL(string: urlS)
+        self.usernameName = usernameNameS
+        self.username = usernameS
+        self.passwordName = passwordNameS
+        self.password = passwordS
         
     }
 }
