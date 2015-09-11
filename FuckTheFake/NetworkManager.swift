@@ -30,8 +30,16 @@ class NetworkManager: NSObject {
         _request.HTTPMethod = "POST"
         _request.HTTPBody = fuckingData.toPostData()
         
-        var _conn:NSURLConnection! = NSURLConnection(request: _request, delegate: nil)
-        _conn!.start()
+        
+        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse? >= nil
+        
+        do {
+            try NSURLConnection.sendSynchronousRequest(_request, returningResponse: response)
+
+        }catch {
+            print(error)
+        }
+        
         
         NSLog("Sending");
     }

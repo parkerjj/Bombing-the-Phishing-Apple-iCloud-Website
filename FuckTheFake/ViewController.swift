@@ -8,7 +8,7 @@
 
 import Cocoa
 
-let ThreadNum:Int = 32
+let ThreadNum:Int = 1
 
 class ViewController: NSViewController {
     var queue : dispatch_queue_t = dispatch_queue_create("gcd.queue", DISPATCH_QUEUE_CONCURRENT);
