@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2C86958B1BA29F6B006D8240"
+               BuildableName = "FuckTheFake.app"
+               BlueprintName = "FuckTheFake"
+               ReferencedContainer = "container:FuckTheFake.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2C86959C1BA29F6B006D8240"
+               BuildableName = "FuckTheFakeTests.xctest"
+               BlueprintName = "FuckTheFakeTests"
+               ReferencedContainer = "container:FuckTheFake.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2C8695A71BA29F6B006D8240"
+               BuildableName = "FuckTheFakeUITests.xctest"
+               BlueprintName = "FuckTheFakeUITests"
+               ReferencedContainer = "container:FuckTheFake.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2C86958B1BA29F6B006D8240"
+            BuildableName = "FuckTheFake.app"
+            BlueprintName = "FuckTheFake"
+            ReferencedContainer = "container:FuckTheFake.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2C86958B1BA29F6B006D8240"
+            BuildableName = "FuckTheFake.app"
+            BlueprintName = "FuckTheFake"
+            ReferencedContainer = "container:FuckTheFake.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2C86958B1BA29F6B006D8240"
+            BuildableName = "FuckTheFake.app"
+            BlueprintName = "FuckTheFake"
+            ReferencedContainer = "container:FuckTheFake.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
