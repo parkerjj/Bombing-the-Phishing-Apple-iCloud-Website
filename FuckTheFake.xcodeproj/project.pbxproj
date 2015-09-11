@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C8695901BA29F6B006D8240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C86958F1BA29F6B006D8240 /* AppDelegate.swift */; };
+		2C8695921BA29F6B006D8240 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8695911BA29F6B006D8240 /* ViewController.swift */; };
+		2C8695941BA29F6B006D8240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8695931BA29F6B006D8240 /* Assets.xcassets */; };
+		2C8695971BA29F6B006D8240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8695951BA29F6B006D8240 /* Main.storyboard */; };
+		2C8695A21BA29F6B006D8240 /* FuckTheFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8695A11BA29F6B006D8240 /* FuckTheFakeTests.swift */; };
+		2C8695AD1BA29F6B006D8240 /* FuckTheFakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8695AC1BA29F6B006D8240 /* FuckTheFakeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C86959E1BA29F6B006D8240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8695841BA29F6B006D8240 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C86958B1BA29F6B006D8240;
+			remoteInfo = FuckTheFake;
+		};
+		2C8695A91BA29F6B006D8240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8695841BA29F6B006D8240 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C86958B1BA29F6B006D8240;
+			remoteInfo = FuckTheFake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C86958C1BA29F6B006D8240 /* FuckTheFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuckTheFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C86958F1BA29F6B006D8240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C8695911BA29F6B006D8240 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C8695931BA29F6B006D8240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C8695961BA29F6B006D8240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C8695981BA29F6B006D8240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C86959D1BA29F6B006D8240 /* FuckTheFakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuckTheFakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8695A11BA29F6B006D8240 /* FuckTheFakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuckTheFakeTests.swift; sourceTree = "<group>"; };
+		2C8695A31BA29F6B006D8240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8695A81BA29F6B006D8240 /* FuckTheFakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuckTheFakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8695AC1BA29F6B006D8240 /* FuckTheFakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuckTheFakeUITests.swift; sourceTree = "<group>"; };
+		2C8695AE1BA29F6B006D8240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C8695891BA29F6B006D8240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C86959A1BA29F6B006D8240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8695A51BA29F6B006D8240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C8695831BA29F6B006D8240 = {
+			isa = PBXGroup;
+			children = (
+				2C86958E1BA29F6B006D8240 /* FuckTheFake */,
+				2C8695A01BA29F6B006D8240 /* FuckTheFakeTests */,
+				2C8695AB1BA29F6B006D8240 /* FuckTheFakeUITests */,
+				2C86958D1BA29F6B006D8240 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C86958D1BA29F6B006D8240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C86958C1BA29F6B006D8240 /* FuckTheFake.app */,
+				2C86959D1BA29F6B006D8240 /* FuckTheFakeTests.xctest */,
+				2C8695A81BA29F6B006D8240 /* FuckTheFakeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C86958E1BA29F6B006D8240 /* FuckTheFake */ = {
+			isa = PBXGroup;
+			children = (
+				2C86958F1BA29F6B006D8240 /* AppDelegate.swift */,
+				2C8695911BA29F6B006D8240 /* ViewController.swift */,
+				2C8695931BA29F6B006D8240 /* Assets.xcassets */,
+				2C8695951BA29F6B006D8240 /* Main.storyboard */,
+				2C8695981BA29F6B006D8240 /* Info.plist */,
+			);
+			path = FuckTheFake;
+			sourceTree = "<group>";
+		};
+		2C8695A01BA29F6B006D8240 /* FuckTheFakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8695A11BA29F6B006D8240 /* FuckTheFakeTests.swift */,
+				2C8695A31BA29F6B006D8240 /* Info.plist */,
+			);
+			path = FuckTheFakeTests;
+			sourceTree = "<group>";
+		};
+		2C8695AB1BA29F6B006D8240 /* FuckTheFakeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8695AC1BA29F6B006D8240 /* FuckTheFakeUITests.swift */,
+				2C8695AE1BA29F6B006D8240 /* Info.plist */,
+			);
+			path = FuckTheFakeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C86958B1BA29F6B006D8240 /* FuckTheFake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8695B11BA29F6B006D8240 /* Build configuration list for PBXNativeTarget "FuckTheFake" */;
+			buildPhases = (
+				2C8695881BA29F6B006D8240 /* Sources */,
+				2C8695891BA29F6B006D8240 /* Frameworks */,
+				2C86958A1BA29F6B006D8240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuckTheFake;
+			productName = FuckTheFake;
+			productReference = 2C86958C1BA29F6B006D8240 /* FuckTheFake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C86959C1BA29F6B006D8240 /* FuckTheFakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8695B41BA29F6B006D8240 /* Build configuration list for PBXNativeTarget "FuckTheFakeTests" */;
+			buildPhases = (
+				2C8695991BA29F6B006D8240 /* Sources */,
+				2C86959A1BA29F6B006D8240 /* Frameworks */,
+				2C86959B1BA29F6B006D8240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C86959F1BA29F6B006D8240 /* PBXTargetDependency */,
+			);
+			name = FuckTheFakeTests;
+			productName = FuckTheFakeTests;
+			productReference = 2C86959D1BA29F6B006D8240 /* FuckTheFakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C8695A71BA29F6B006D8240 /* FuckTheFakeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8695B71BA29F6B006D8240 /* Build configuration list for PBXNativeTarget "FuckTheFakeUITests" */;
+			buildPhases = (
+				2C8695A41BA29F6B006D8240 /* Sources */,
+				2C8695A51BA29F6B006D8240 /* Frameworks */,
+				2C8695A61BA29F6B006D8240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C8695AA1BA29F6B006D8240 /* PBXTargetDependency */,
+			);
+			name = FuckTheFakeUITests;
+			productName = FuckTheFakeUITests;
+			productReference = 2C8695A81BA29F6B006D8240 /* FuckTheFakeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C8695841BA29F6B006D8240 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Parker;
+				TargetAttributes = {
+					2C86958B1BA29F6B006D8240 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					2C86959C1BA29F6B006D8240 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 2C86958B1BA29F6B006D8240;
+					};
+					2C8695A71BA29F6B006D8240 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 2C86958B1BA29F6B006D8240;
+					};
+				};
+			};
+			buildConfigurationList = 2C8695871BA29F6B006D8240 /* Build configuration list for PBXProject "FuckTheFake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C8695831BA29F6B006D8240;
+			productRefGroup = 2C86958D1BA29F6B006D8240 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C86958B1BA29F6B006D8240 /* FuckTheFake */,
+				2C86959C1BA29F6B006D8240 /* FuckTheFakeTests */,
+				2C8695A71BA29F6B006D8240 /* FuckTheFakeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C86958A1BA29F6B006D8240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8695941BA29F6B006D8240 /* Assets.xcassets in Resources */,
+				2C8695971BA29F6B006D8240 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C86959B1BA29F6B006D8240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8695A61BA29F6B006D8240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C8695881BA29F6B006D8240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8695921BA29F6B006D8240 /* ViewController.swift in Sources */,
+				2C8695901BA29F6B006D8240 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8695991BA29F6B006D8240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8695A21BA29F6B006D8240 /* FuckTheFakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8695A41BA29F6B006D8240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8695AD1BA29F6B006D8240 /* FuckTheFakeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C86959F1BA29F6B006D8240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C86958B1BA29F6B006D8240 /* FuckTheFake */;
+			targetProxy = 2C86959E1BA29F6B006D8240 /* PBXContainerItemProxy */;
+		};
+		2C8695AA1BA29F6B006D8240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C86958B1BA29F6B006D8240 /* FuckTheFake */;
+			targetProxy = 2C8695A91BA29F6B006D8240 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C8695951BA29F6B006D8240 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C8695961BA29F6B006D8240 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C8695AF1BA29F6B006D8240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2C8695B01BA29F6B006D8240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2C8695B21BA29F6B006D8240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FuckTheFake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpak.FuckTheFake;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C8695B31BA29F6B006D8240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FuckTheFake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpak.FuckTheFake;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C8695B51BA29F6B006D8240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FuckTheFakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpak.FuckTheFakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuckTheFake.app/Contents/MacOS/FuckTheFake";
+			};
+			name = Debug;
+		};
+		2C8695B61BA29F6B006D8240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FuckTheFakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpak.FuckTheFakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuckTheFake.app/Contents/MacOS/FuckTheFake";
+			};
+			name = Release;
+		};
+		2C8695B81BA29F6B006D8240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FuckTheFakeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpak.FuckTheFakeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FuckTheFake;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2C8695B91BA29F6B006D8240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FuckTheFakeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpak.FuckTheFakeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FuckTheFake;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C8695871BA29F6B006D8240 /* Build configuration list for PBXProject "FuckTheFake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8695AF1BA29F6B006D8240 /* Debug */,
+				2C8695B01BA29F6B006D8240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C8695B11BA29F6B006D8240 /* Build configuration list for PBXNativeTarget "FuckTheFake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8695B21BA29F6B006D8240 /* Debug */,
+				2C8695B31BA29F6B006D8240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C8695B41BA29F6B006D8240 /* Build configuration list for PBXNativeTarget "FuckTheFakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8695B51BA29F6B006D8240 /* Debug */,
+				2C8695B61BA29F6B006D8240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C8695B71BA29F6B006D8240 /* Build configuration list for PBXNativeTarget "FuckTheFakeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8695B81BA29F6B006D8240 /* Debug */,
+				2C8695B91BA29F6B006D8240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C8695841BA29F6B006D8240 /* Project object */;
+}
