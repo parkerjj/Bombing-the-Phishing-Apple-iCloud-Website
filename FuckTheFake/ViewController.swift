@@ -8,13 +8,13 @@
 
 import Cocoa
 
-let ThreadNum:Int = 32
+let MaxThreadNum:Int = 128
 
 class ViewController: NSViewController {
     var queue : dispatch_queue_t = dispatch_queue_create("gcd.queue", DISPATCH_QUEUE_CONCURRENT);
-    var group : dispatch_group_t = dispatch_group_create();
     var pauseFlag = 0
     var fuckingCount:Int64 = 0
+    var threadCount = 0
     @IBOutlet var fuckingCountLabel : NSTextField?
     @IBOutlet var startButton:NSButton?
     @IBOutlet var pauseButton:NSButton?
@@ -40,8 +40,8 @@ class ViewController: NSViewController {
     @IBAction func startButtonClicked(x:NSButton) {
         startButton!.enabled = false
         pauseButton!.enabled = true
-        self.start()
-
+        
+        self.performSelectorInBackground(Selector("start"), withObject: nil)
     }
     
     @IBAction func pauseButtonClicked(x:NSButton){
@@ -53,20 +53,16 @@ class ViewController: NSViewController {
     
     func start(){
         pauseFlag = 0
-        for _ in 0...ThreadNum {
-            dispatch_group_async(group, queue) { () -> Void in
-                dispatch_group_enter(self.group);
-                
-                while self.pauseFlag == 0 {
-                    self.initFuckingDataAndPost()
-                    self.fuckingCount += 1
-                    
+        
+        while (self.pauseFlag == 0) {
+            NSThread.sleepForTimeInterval(0.05)
+            if (threadCount < MaxThreadNum){
+                autoreleasepool {
+                    threadCount++
+                    dispatch_async(queue, { () -> Void in
+                        self.initFuckingDataAndPost()
+                    })
                 }
-                
-                dispatch_group_notify(self.group, self.queue, { () -> Void in
-                    NSLog("Thread Stopping...")
-                    dispatch_group_leave(self.group);
-                })
             }
         }
     }
@@ -78,8 +74,16 @@ class ViewController: NSViewController {
     
     
     func initFuckingDataAndPost(){
-        let fuckingData = FuckingRule.init()
-        NetworkManager.shareInstance().sendFuckingData(fuckingData)
+        autoreleasepool { () -> () in
+            let fuckingData = FuckingRule.init()
+            NetworkManager.shareInstance().sendFuckingData(fuckingData) { (succeed) -> Void in
+                self.threadCount--
+                if (succeed){
+                    self.fuckingCount += 1
+                }
+            }
+        }
+
     }
     
     func updateCounting(){

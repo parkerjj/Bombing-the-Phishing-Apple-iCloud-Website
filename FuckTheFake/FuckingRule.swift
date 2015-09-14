@@ -33,8 +33,9 @@ class FuckingRule : NSObject {
             postString += "&\(str)=\(password)"
         }
         
+        let data = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
-        return (postString as NSString).dataUsingEncoding(NSUTF8StringEncoding)!
+        return data!
     }
     
     
