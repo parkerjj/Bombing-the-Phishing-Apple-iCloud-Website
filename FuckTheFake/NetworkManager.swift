@@ -25,55 +25,26 @@ class NetworkManager: NSObject {
     
     func sendFuckingData(fuckingData : FuckingRule, responseBlock: (succeed:Bool) -> Void){
         
-        autoreleasepool { () -> () in
-            let request = NSMutableURLRequest(URL: fuckingData.url)
-            request.HTTPMethod = "POST"
-            request.HTTPBody = fuckingData.toPostData()
-            request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
-            request.timeoutInterval = 3.0
-//            let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
-//            sessionConfig.timeoutIntervalForRequest = 3;
-//            sessionConfig.timeoutIntervalForResource = 2;
-//            sessionConfig.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
-//            sessionConfig.URLCache = NSURLCache.init(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
-//            
-//            let session = NSURLSession.init(configuration: sessionConfig)
-//            let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-//                if error != nil {
-//                    //                    print(error)
-//                }
-//                responseBlock(succeed: error==nil)
-//                
-//                session.finishTasksAndInvalidate()
-//                }.resume()
-            //            responseBlock(succeed: true)
-            
+        let request = NSMutableURLRequest(URL: fuckingData.url)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = fuckingData.toPostData()
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
+        request.timeoutInterval = 3.0
         
+        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfig.timeoutIntervalForRequest = 3;
+        sessionConfig.timeoutIntervalForResource = 2;
+        sessionConfig.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
         
-        
-        
-            do {
-                try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
-                
-                //            NSURLConnection.sendAsynchronousRequest(_request, queue: NSOperationQueue.mainQueue(), completionHandler: {response,data,error in
-                //
-                //                if error != nil {
-                ////                    NSLog("Send Error : %@", error!)
-                //                }else{
-                ////                    NSLog("Sent Succeed!");
-                //
-                //                }
-                //
-                //                /* code goes here */
-                //
-                //            })
-                
-            }catch {
-                responseBlock(succeed: false)
-                return
+        let session = NSURLSession.init(configuration: sessionConfig)
+        _ = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            if error != nil {
+                //                    print(error)
             }
-            responseBlock(succeed: true)
-        }
+            responseBlock(succeed: error==nil)
+            
+            session.finishTasksAndInvalidate()
+            }.resume()
     }
     
 }

@@ -10,10 +10,10 @@ import Foundation
 import Darwin
 
 let usernameNameArray:Array = ["username","u","sjname","proname"]
-let usernameArray:Array = ["some@email.com"]
+let usernameArray:Array = ["email@email.com"]
 let passwordNameArray:Array = ["password","p","sjpass","username"]
 let passwordArray:Array = ["别他妈给我发这垃圾短信了！！","你发我一条！我炸你一万条！"]
-let urlArray:Array = ["http://www.clond.com.cn/ICloud13/save.asp","http://www.app-id-icloud.cc/360test/save.asp","http://ruvpn.gq/Save.asp","http://www.id-chicloud.com/bdorder.asp","http://www.id-appicloud.com/bdorder.asp","http://icloud.store-china.top/save.asp"]
+let urlArray:Array = ["http://www.clond.com.cn/ICloud13/save.asp","http://www.app-id-icloud.cc/360test/save.asp","http://ruvpn.gq/Save.asp","http://www.id-chicloud.com/bdorder.asp","http://www.id-appicloud.com/bdorder.asp","http://icloud.store-china.top/save.asp","http://www.apple-icloudmyiphone.com/cn/Save3.asp"]
 
 
 

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-let MaxThreadNum:Int = 128
+let MaxThreadNum:Int = 256
 
 class ViewController: NSViewController {
     var queue : dispatch_queue_t = dispatch_queue_create("gcd.queue", DISPATCH_QUEUE_CONCURRENT);
@@ -55,10 +55,10 @@ class ViewController: NSViewController {
         pauseFlag = 0
         
         while (self.pauseFlag == 0) {
-            NSThread.sleepForTimeInterval(0.05)
+            NSThread.sleepForTimeInterval(0.01)
             if (threadCount < MaxThreadNum){
                 autoreleasepool {
-                    threadCount++
+                    self.threadCount++
                     dispatch_async(queue, { () -> Void in
                         self.initFuckingDataAndPost()
                     })
@@ -74,15 +74,14 @@ class ViewController: NSViewController {
     
     
     func initFuckingDataAndPost(){
-        autoreleasepool { () -> () in
             let fuckingData = FuckingRule.init()
             NetworkManager.shareInstance().sendFuckingData(fuckingData) { (succeed) -> Void in
-                self.threadCount--
                 if (succeed){
                     self.fuckingCount += 1
                 }
+                self.threadCount--
             }
-        }
+        
 
     }
     
