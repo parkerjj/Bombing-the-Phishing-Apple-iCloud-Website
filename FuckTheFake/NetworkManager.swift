@@ -34,14 +34,27 @@ class NetworkManager: NSObject {
         let response: AutoreleasingUnsafeMutablePointer<NSURLResponse? >= nil
         
         do {
+            
             try NSURLConnection.sendSynchronousRequest(_request, returningResponse: response)
+//            NSURLConnection.sendAsynchronousRequest(_request, queue: NSOperationQueue.mainQueue(), completionHandler: {response,data,error in
+//               
+//                if error != nil {
+////                    NSLog("Send Error : %@", error!)
+//                }else{
+////                    NSLog("Sent Succeed!");
+//
+//                }
+//                
+//                /* code goes here */
+//            
+//            })
 
         }catch {
-            print(error)
+//            print(error)
+            return
         }
         
         
-        NSLog("Sending");
     }
     
 }
