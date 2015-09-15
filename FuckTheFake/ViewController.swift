@@ -15,13 +15,19 @@ class ViewController: NSViewController {
     var pauseFlag = 0
     var fuckingCount:Int64 = 0
     var threadCount = 0
+    var threadCountLock = NSLock.init()
+    
     @IBOutlet var fuckingCountLabel : NSTextField?
     @IBOutlet var startButton:NSButton?
     @IBOutlet var pauseButton:NSButton?
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        if #available(OSX 10.10, *) {
+            super.viewDidLoad()
+        } else {
+            // Fallback on earlier versions
+        }
         
         let timer:NSTimer = NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: Selector("updateCounting"), userInfo: nil, repeats: true)
         timer.fire()
@@ -58,7 +64,9 @@ class ViewController: NSViewController {
             NSThread.sleepForTimeInterval(0.01)
             if (threadCount < MaxThreadNum){
                 autoreleasepool {
+                    threadCountLock.lock()
                     self.threadCount++
+                    threadCountLock.unlock()
                     dispatch_async(queue, { () -> Void in
                         self.initFuckingDataAndPost()
                     })
@@ -79,7 +87,9 @@ class ViewController: NSViewController {
                 if (succeed){
                     self.fuckingCount += 1
                 }
+                self.threadCountLock.lock()
                 self.threadCount--
+                self.threadCountLock.unlock()
             }
         
 
