@@ -60,8 +60,7 @@ class FuckingRule : NSObject {
             urlS += "\(str)=\(passwordS)&"
         }
         
-        
-        urlS = urlS.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        urlS = urlS.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         self.url = NSURL(string: urlS)
         self.username = usernameS
         self.password = passwordS

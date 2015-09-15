@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
@@ -673,7 +673,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Af-Lq-8Gb">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Af-Lq-8Gb">
                                 <rect key="frame" x="52" y="188" width="144" height="24"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fucking Count:" id="dfu-gW-rhL">
@@ -682,8 +682,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="im7-yZ-xeC">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="im7-yZ-xeC">
                                 <rect key="frame" x="223" y="187" width="88" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="G2J-wb-6GC"/>
+                                </constraints>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="4yF-QH-JvT">
                                     <font key="font" metaFont="system" size="22"/>
@@ -691,8 +694,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-Ki-Yv1">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-Ki-Yv1">
                                 <rect key="frame" x="396" y="222" width="70" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="Qdi-qP-MhT"/>
+                                </constraints>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gBn-d1-ong">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -702,7 +708,7 @@
                                     <action selector="startButtonClicked:" target="XfG-lQ-9wD" id="VCU-Hp-3h5"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-Wu-NCO">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-Wu-NCO">
                                 <rect key="frame" x="396" y="189" width="70" height="32"/>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obY-4R-urP">
@@ -713,7 +719,30 @@
                                     <action selector="pauseButtonClicked:" target="XfG-lQ-9wD" id="rlF-pO-xdB"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSP-JZ-J6k">
+                                <rect key="frame" x="389" y="118" width="84" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Setting" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KyW-vM-p7q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pauseButtonClicked:" target="XfG-lQ-9wD" id="VqN-tn-cDD"/>
+                                    <segue destination="tTf-Tv-NVa" kind="popover" popoverAnchorView="tSP-JZ-J6k" popoverBehavior="t" preferredEdge="maxY" id="RCV-DM-zSh"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="g3A-Ki-Yv1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="0as-82-DVV"/>
+                            <constraint firstItem="bC8-Wu-NCO" firstAttribute="top" secondItem="g3A-Ki-Yv1" secondAttribute="bottom" constant="12" symbolic="YES" id="5Rb-Pi-ZzY"/>
+                            <constraint firstItem="g3A-Ki-Yv1" firstAttribute="trailing" secondItem="bC8-Wu-NCO" secondAttribute="trailing" id="DOw-0R-jTM"/>
+                            <constraint firstItem="8Af-Lq-8Gb" firstAttribute="centerY" secondItem="im7-yZ-xeC" secondAttribute="centerY" id="Mth-Kf-Kl8"/>
+                            <constraint firstAttribute="trailing" secondItem="g3A-Ki-Yv1" secondAttribute="trailing" constant="20" symbolic="YES" id="e8c-fB-d9F"/>
+                            <constraint firstItem="im7-yZ-xeC" firstAttribute="leading" secondItem="8Af-Lq-8Gb" secondAttribute="trailing" constant="31" id="ery-1N-lxL"/>
+                            <constraint firstItem="im7-yZ-xeC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="56" id="ojX-sv-1v1"/>
+                            <constraint firstItem="bC8-Wu-NCO" firstAttribute="leading" secondItem="im7-yZ-xeC" secondAttribute="trailing" constant="93" id="pBH-er-dZS"/>
+                            <constraint firstItem="g3A-Ki-Yv1" firstAttribute="leading" secondItem="bC8-Wu-NCO" secondAttribute="leading" id="zbc-qB-7JI"/>
+                        </constraints>
                         <animations/>
                     </view>
                     <connections>
@@ -725,6 +754,92 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="ugq-WK-e3q">
+            <objects>
+                <viewController id="tTf-Tv-NVa" customClass="SettingViewController" customModule="FuckTheFake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="IQk-Xw-93P">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAa-hO-t3a">
+                                <rect key="frame" x="0.0" y="29" width="480" height="271"/>
+                                <clipView key="contentView" ambiguous="YES" id="0As-X6-f9g">
+                                    <rect key="frame" x="1" y="23" width="478" height="247"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="pjw-A8-bLU" id="piO-Pm-0or">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="247"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="476.5546875" minWidth="40" maxWidth="1000" id="CbW-lm-jZd">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="URL">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="mJK-Z9-61w">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="tTf-Tv-NVa" id="0zD-yH-mtn"/>
+                                                <outlet property="delegate" destination="tTf-Tv-NVa" id="9BR-Kg-Lr7"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <animations/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="RlN-FM-czE">
+                                    <rect key="frame" x="1" y="254" width="478" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="qdv-3e-jbd">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="pjw-A8-bLU">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8mB-J6-5nG">
+                                <rect key="frame" x="5" y="4" width="22" height="19"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundRect" title="+" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MBG-6w-dXr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wX6-Vr-lpv">
+                                <rect key="frame" x="36" y="4" width="22" height="19"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundRect" title="-" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Skq-93-Iq1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="J1H-Pu-RHz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1145"/>
         </scene>
     </scenes>
 </document>

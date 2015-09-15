@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0518991BA86DC20021E4F2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0518981BA86DC20021E4F2 /* SettingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2C8695901BA29F6B006D8240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C86958F1BA29F6B006D8240 /* AppDelegate.swift */; };
 		2C8695921BA29F6B006D8240 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8695911BA29F6B006D8240 /* ViewController.swift */; };
 		2C8695941BA29F6B006D8240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8695931BA29F6B006D8240 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0518981BA86DC20021E4F2 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2C86958C1BA29F6B006D8240 /* FuckTheFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuckTheFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C86958F1BA29F6B006D8240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C8695911BA29F6B006D8240 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,13 +101,14 @@
 		2C86958E1BA29F6B006D8240 /* FuckTheFake */ = {
 			isa = PBXGroup;
 			children = (
-				2C86958F1BA29F6B006D8240 /* AppDelegate.swift */,
-				2C8695911BA29F6B006D8240 /* ViewController.swift */,
 				2C8695BA1BA2A1D8006D8240 /* FuckingRule.swift */,
+				2C86958F1BA29F6B006D8240 /* AppDelegate.swift */,
+				2C8695BC1BA2A2EE006D8240 /* NetworkManager.swift */,
+				2C8695911BA29F6B006D8240 /* ViewController.swift */,
+				2C0518981BA86DC20021E4F2 /* SettingViewController.swift */,
 				2C8695931BA29F6B006D8240 /* Assets.xcassets */,
 				2C8695951BA29F6B006D8240 /* Main.storyboard */,
 				2C8695981BA29F6B006D8240 /* Info.plist */,
-				2C8695BC1BA2A2EE006D8240 /* NetworkManager.swift */,
 			);
 			path = FuckTheFake;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0518991BA86DC20021E4F2 /* SettingViewController.swift in Sources */,
 				2C8695BD1BA2A2EE006D8240 /* NetworkManager.swift in Sources */,
 				2C8695921BA29F6B006D8240 /* ViewController.swift in Sources */,
 				2C8695BB1BA2A1D8006D8240 /* FuckingRule.swift in Sources */,
