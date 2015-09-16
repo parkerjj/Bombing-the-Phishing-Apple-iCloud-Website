@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         NSURLCache.setSharedURLCache(NSURLCache.init(memoryCapacity: 0, diskCapacity: 0, diskPath: nil))
-        
+        FuckingRule.initialize()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

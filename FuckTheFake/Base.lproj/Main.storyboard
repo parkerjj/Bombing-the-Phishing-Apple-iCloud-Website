@@ -766,18 +766,18 @@
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAa-hO-t3a">
                                 <rect key="frame" x="0.0" y="29" width="480" height="271"/>
                                 <clipView key="contentView" ambiguous="YES" id="0As-X6-f9g">
-                                    <rect key="frame" x="1" y="23" width="478" height="247"/>
+                                    <rect key="frame" x="1" y="0.0" width="478" height="270"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="pjw-A8-bLU" id="piO-Pm-0or">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="247"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="476.5546875" minWidth="40" maxWidth="1000" id="CbW-lm-jZd">
+                                                <tableColumn width="475" minWidth="40" maxWidth="1000" id="CbW-lm-jZd">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="URL">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -801,18 +801,18 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <animations/>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="RlN-FM-czE">
-                                    <rect key="frame" x="1" y="254" width="478" height="16"/>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="RlN-FM-czE">
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="qdv-3e-jbd">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="qdv-3e-jbd">
+                                    <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="pjw-A8-bLU">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="478" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableHeaderView>
@@ -824,6 +824,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="addNewRow:" target="tTf-Tv-NVa" id="O2B-ez-VYU"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wX6-Vr-lpv">
                                 <rect key="frame" x="36" y="4" width="22" height="19"/>
@@ -832,10 +835,16 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="deleteRow:" target="tTf-Tv-NVa" id="q10-3W-KjE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="piO-Pm-0or" id="156-h7-YCL"/>
+                    </connections>
                 </viewController>
                 <customObject id="J1H-Pu-RHz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

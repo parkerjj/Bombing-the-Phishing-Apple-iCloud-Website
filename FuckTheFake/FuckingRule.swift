@@ -13,7 +13,8 @@ let usernameNameArray:Array = ["username","u","sjname","proname"]
 let usernameArray:Array = ["your@email.address"]
 let passwordNameArray:Array = ["password","p","sjpass","username"]
 let passwordArray:Array = ["别他妈给我发这垃圾短信了！！","你发我一条！我炸你一万条！"]
-let urlArray:Array = ["http://www.clond.com.cn/ICloud13/save.asp","http://www.app-id-icloud.cc/360test/save.asp","http://ruvpn.gq/Save.asp","http://www.id-chicloud.com/bdorder.asp","http://www.id-appicloud.com/bdorder.asp","http://icloud.store-china.top/save.asp","http://www.apple-icloudmyiphone.com/cn/Save3.asp","http://www.houtai123.in/new/mbsave1.php","http://www.myapple-id.cc//itunes/ht/icloud.asp"]
+
+var urlArray:Array = ["http://www.clond.com.cn/ICloud13/save.asp","http://www.app-id-icloud.cc/360test/save.asp","http://ruvpn.gq/Save.asp","http://www.id-chicloud.com/bdorder.asp","http://www.id-appicloud.com/bdorder.asp","http://icloud.store-china.top/save.asp","http://www.apple-icloudmyiphone.com/cn/Save3.asp","http://www.houtai123.in/new/mbsave1.php","http://www.myapple-id.cc//itunes/ht/icloud.asp"]
 
 
 
@@ -21,6 +22,17 @@ class FuckingRule : NSObject {
     var url:NSURL!
     var username:String! = ""
     var password:String! = ""
+    
+    
+    override class func initialize(){
+        super.initialize()
+        if getURLList() == nil {
+            saveURLList(nonull: urlArray)
+        }
+        self.updateURLArray()
+    }
+    
+    
     
     func toPostData()->NSData{
         
@@ -64,9 +76,22 @@ class FuckingRule : NSObject {
         self.url = NSURL(string: urlS)
         self.username = usernameS
         self.password = passwordS
+    }
+    
+    
+    class func getURLList() -> Array<String>?{
+        let urlList = NSUserDefaults.standardUserDefaults().objectForKey("URLList")
         
-        
-
+        return urlList as! Array<String>?
+    }
+    
+    class func saveURLList(nonull urlList : Array<String>) {
+        NSUserDefaults.standardUserDefaults().setObject(urlList, forKey: "URLList")
+        updateURLArray()
+    }
+    
+    class func updateURLArray() {
+        urlArray = getURLList()!
         
     }
 }
