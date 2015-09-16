@@ -39,7 +39,7 @@ class ViewController: NSViewController {
     
     override var representedObject: AnyObject? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -61,43 +61,47 @@ class ViewController: NSViewController {
         pauseFlag = 0
         
         while (self.pauseFlag == 0) {
-            NSThread.sleepForTimeInterval(0.01)
+            NSThread.sleepForTimeInterval(0.001)
             if (threadCount < MaxThreadNum){
-                autoreleasepool {
-                    threadCountLock.lock()
-                    self.threadCount++
-                    threadCountLock.unlock()
+
                     dispatch_async(queue, { () -> Void in
+                        autoreleasepool {
+
+                        self.threadCountLock.lock()
+                        self.threadCount += 1
+                        self.threadCountLock.unlock()
+                        
                         self.initFuckingDataAndPost()
+                        }
                     })
-                }
+
+                
             }
         }
     }
     
     func stop(){
         pauseFlag = 1
-
+        
     }
     
     
     func initFuckingDataAndPost(){
-            let fuckingData = FuckingRule.init()
-            NetworkManager.shareInstance().sendFuckingData(fuckingData) { (succeed) -> Void in
-                if (succeed){
-                    self.fuckingCount += 1
-                }
-                self.threadCountLock.lock()
-                self.threadCount--
-                self.threadCountLock.unlock()
+        let fuckingData = FuckingRule.init()
+        NetworkManager.shareInstance().sendFuckingData(fuckingData) { (succeed) -> Void in
+            if (succeed){
+                self.fuckingCount += 1
             }
+            self.threadCountLock.lock()
+            self.threadCount -= 1
+            self.threadCountLock.unlock()
+        }
         
-
     }
     
     func updateCounting(){
         fuckingCountLabel?.stringValue = "\(fuckingCount)"
     }
-
+    
 }
 
